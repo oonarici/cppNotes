@@ -96,5 +96,89 @@ int main()
 
 /*
 ---> const keyword Difference <---
+  - local or global const variables must be initiliazed in C++, not in C.
+int main()
+{
+       //top level const
+   //const pointer to int
+   int* const p;  //it is not legal, it must be initiliazed
 
+   //pointer to const
+   //low level const
+   const int  *p;
+   int const* p;
+
+ 
+}
+  It differs according to const keyword befor or after asteriks(*) sign. If const keyword is after asteriks(*) you promise
+that you will not change pointer variable, it will be const. If const keyword before the asteriks(*) you promise that
+you will not change the varilable which pointer points.
+
+      int const* is a pointer to constant integer
+      const int* is a pointer to constant integer
+      int *const is a constant pointer to integer
+      const int* const is a constant pointer to constan integer
+*/
+
+//-----------------------------------------------------------------------------------------------------------
+
+/*
+---> Converstion From const object to non-const object  <---
+
+- Converstion From const object to non-const object is legal in C
+- Converstion From const object to non-const object is not legal in C++
+
+int main()
+{
+    const in x = 10;
+    // &x 's type is cons int*
+
+    int *p = &x; // not legal. A value of type "const in" cannot be used to initialize and entity of type "int"
+}
+
+int main()
+{
+    char str[4] = "asdf"; //legal in C, not in C++. Because "asdf" is const char[5]
+}
+*/
+
+//-----------------------------------------------------------------------------------------------------------
+
+/*
+---> Bool Type  <---
+    In C++ bool is a built-in type
+    In C logic operators produce signed int, in C++ boolean.
+
+
+    There is implicit type conversion between arithmatic types and bool type
+    int manin()
+    {
+        //non-zero values are gonna be true, zero values are gonna be false
+        int x = 10;
+        bool b = x;
+
+        //Possible to implicit type convertion pointer type to boolean
+        int ival = 1;
+        int *ptr = &ival;
+        bool b = ptr;
+        //Every pointers gonna be true, except nullptr
+
+        //But not legal type converstion boolean to pointer
+    }
+*/
+
+//-----------------------------------------------------------------------------------------------------------
+
+/*
+---> Null Pointer  <---
+    In C Language NULL is a macro, and its casted void*. It is a non-keyword or variable.
+    In C int* p = 0 is legal.
+
+    In Modern C++ nullptr is keyword. An it's type is nullptr_t, and its not a type allias.
+    Why is it need? Because nullptr can be converted to pointer type automatically. Arithmatic types cannot be.
+    
+    int manin()
+    {
+        
+    }
 */
