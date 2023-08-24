@@ -176,7 +176,9 @@ int main()
 
     In Modern C++ nullptr is keyword. An it's type is nullptr_t, and its not a type allias.
     Why is it need? Because nullptr can be converted to pointer type automatically. Arithmatic types cannot be.
+
     
+
     int manin()
     {
         
