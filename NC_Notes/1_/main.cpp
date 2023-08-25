@@ -41,7 +41,7 @@ void foo(void); means that foo doesn't have parameters.
 
 /*
 ---> Scope Leakage <---
-Whenever we need and variable, then we should declare it.
+Whenever we need and variable, then we should declare it, not top of the scope.
 
 */
 
@@ -177,7 +177,7 @@ int main()
     In Modern C++ nullptr is keyword. An it's type is nullptr_t, and its not a type allias.
     Why is it need? Because nullptr can be converted to pointer type automatically. Arithmatic types cannot be.
 
-    
+
 
     int manin()
     {
