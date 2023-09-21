@@ -52,6 +52,7 @@ int main()
 */
 
 //--------------------------------------------------------------------------------------
+
 /*
 #include <iostream>
 
@@ -61,8 +62,30 @@ int main()
 {
     int x = 40;
     std::cout << x << "\n" 
-              << ::x << "\n";
+              << ::x << "\n"; //scope resolution operator tells the compiler search operand name in the namespace scope.
 
     return 0;
 }
+*/
+
+//---------------------------------------------------------------------------------------------
+
+/*
+Scopes in C
+ - file scope
+ - block scope
+ - function prototype scope
+ - function scope
+
+Scopes in C++
+ - file scope ==> namespace scope
+ - class scope
+ - block scope 
+ - function prototype scope 
+ - function scope
+
+*/
+
+/*
+
 */
